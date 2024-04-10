@@ -1,15 +1,20 @@
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
+@import "pages/home";
 
 
 *,
-*::after *::before {
+
+
+*::after 
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -121,55 +126,59 @@ body {
     }
 }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 .1rem 2rem ($color-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem ($color-black, .2);
+
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
 }
 
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 .1rem 2rem ($color-black, .2);
-}
-
-.btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem ($color-black, .2);
-
-}
-
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: $color-white;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
 
 @keyframes MoveInBottom {
     0% {
