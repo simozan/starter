@@ -112,6 +112,15 @@ body {
   animation: MoveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  background-color: purple;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-of-2 {
+    width: calc((100%-$gutter-horizontal)/2); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)), url(../img/hero.jpg);
