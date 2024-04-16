@@ -55,15 +55,17 @@
     }
 }
 
-// .btn-text{
-//     &:link,
-//     &:visited {
+.btn-text{
+    &:link,
+    &:visited {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+    }
+    &.hover{
 
-//     },
-//     &.hover{
+    }
+    &:active{
 
-//     }
-//     &:active{
-
-//     }
-// }
+    }
+}
