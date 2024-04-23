@@ -2,12 +2,12 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position:relative;
+    height: 50rem;
 
     &__side {
-        background-color: orangered;
         height: 50rem;
         font-size: 2rem;
-        transition: all .8s;
+        transition: all .8s ease;
         color: $color-white;
         position: absolute;
         top:0;
@@ -16,12 +16,15 @@
         backface-visibility: hidden ;
 
         &--front{
-            background-color: orangered;
+            background-color: $color-white;
         }
 
         &--back{
-            background-color: green;
             transform: rotateY(180deg);
+
+            &-1{
+                background-color: linear-gradient(to right bottom, $color-secondary-light );
+            }
         }
 
 
