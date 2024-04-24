@@ -1,7 +1,7 @@
 .card {
     perspective: 150rem;
     -moz-perspective: 150rem;
-    position:relative;
+    position: relative;
     height: 50rem;
 
     &__side {
@@ -10,20 +10,22 @@
         transition: all .8s ease;
         color: $color-white;
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         width: 100%;
-        backface-visibility: hidden ;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
-        &--front{
+        &--front {
             background-color: $color-white;
         }
 
-        &--back{
+        &--back {
             transform: rotateY(180deg);
 
-            &-1{
-                background-color: linear-gradient(to right bottom, $color-secondary-light );
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
         }
 
