@@ -81,7 +81,7 @@
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-    
+
 
         &--1 {
             background-image: linear-gradient(to right bottom,
@@ -89,4 +89,19 @@
         }
     }
 
+    &__details {
+        ul {
+            list-style: none;
+            width: 80%;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
 }
