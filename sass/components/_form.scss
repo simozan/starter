@@ -50,7 +50,9 @@
     width: 49%;
     display: inline-block;
   }
-
+  &__radio-input {
+    display: none;
+  }
   &__radio-label {
     font-size: $default-font-size;
     cursor: pointer;
@@ -75,12 +77,15 @@
       width: 1.3rem;
       border-radius: 50%;
       position: absolute;
-      top:50%;
-      left:50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
+      transition: opacity 0.2s;
     }
   }
-//   &__radio-input:checked 
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
 }
