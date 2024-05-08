@@ -419,7 +419,13 @@ body {
   top: 0;
   left: 0;
   z-index: 99999;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
   .popup__content {
     position: absolute;
     top: 50%;
