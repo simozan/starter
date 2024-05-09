@@ -1,3 +1,16 @@
+/*
+0 - 600px : Phone 
+600 - 9000px : Tablet portrait
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal style apply
+1800px + : Big desktop
+*/
+/*$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes MoveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +48,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
