@@ -16,8 +16,8 @@
     height: 95vh;
   }
 
-  @media (min-resolution: 192pdi) and (min-width: 37.5em),
-  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+  @media only screen and (min-resolution: 192pdi) and (min-width: 37.5em),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
   (min-width: 125em) {
     background-image: linear-gradient(
         to right,
