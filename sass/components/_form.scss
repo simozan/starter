@@ -12,9 +12,9 @@
     background-color: rgba($color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
-    width: 70%;
+    width: 90%;
     display: block;
-    transition: all 0.3sec;
+    transition: all 0.3s;
 
     @include respond(tab-port){
       width: 100%;
@@ -41,7 +41,7 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
-    transition: all 3sec;
+    transition: all 3s;
   }
 
   &__input:placeholder-shown + &__label {
