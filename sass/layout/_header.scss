@@ -1,9 +1,9 @@
 .header {
   height: 85vh;
   background-image: linear-gradient(
-      to right,
+      to right bottom,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.808)
+      rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero-small.jpg);
   background-size: cover;
@@ -20,9 +20,9 @@
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
   (min-width: 125em) {
     background-image: linear-gradient(
-        to right,
+        to right bottom,
         rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.808)
+        rgba($color-primary-dark, 0.8)
       ),
       url(../img/hero.jpg);
   }
