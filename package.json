@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Landing page for natours",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
